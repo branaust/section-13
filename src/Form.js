@@ -11,6 +11,7 @@ class Form extends Component {
     }
 
     handleSubmit = (evt) => {
+        evt.preventDefault()
         alert(`Your typed: ${this.state.username}`)
         this.setState({ username: '' })
     }
@@ -25,6 +26,7 @@ class Form extends Component {
                         type="text"
                         value={this.state.username}
                         onChange={this.handleChange} />
+                    <button>Submit!</button>
                 </form>
             </div>
         )
